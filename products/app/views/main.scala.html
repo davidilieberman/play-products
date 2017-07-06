@@ -4,6 +4,9 @@
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  *@
+@import play.api.Configuration
+
+@this(debugTemplate:views.html.debug)
 @(title: String)(content: Html)(implicit messages: Messages)
 
 <!DOCTYPE html>
@@ -27,6 +30,7 @@
             </div>
             <div class="container">
                 @content
+                @debugTemplate()
             </div>
         </div>
       <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>

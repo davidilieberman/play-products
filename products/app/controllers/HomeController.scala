@@ -22,7 +22,6 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
    * a path of `/`.
    */
   def index() = Action { implicit request: Request[AnyContent] =>
-    //Ok(views.html.index())
     Redirect(routes.ProductsController.list())
   }
 }

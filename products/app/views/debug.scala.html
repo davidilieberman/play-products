@@ -1,0 +1,10 @@
+@import play.api.Configuration
+@import java.time.LocalDateTime
+@import java.time.format.DateTimeFormatter
+@this(config:Configuration)
+@()(implicit messages:Messages)
+<footer>
+    lang = @messages.lang.code,
+    user = @config.underlying.getString("environment.user"),
+    date = @(LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME))
+</footer>

@@ -1,10 +1,13 @@
+@import play.api.Configuration
+
+@this(config:Configuration, mainTemplate:views.html.main)
 @(products: List[Product])(implicit messages: Messages)
 
-@main(Messages("application.name")) {
+@mainTemplate("FRED") {
     <dl class="products">
     @for(product <- products) {
         <dt>@product.name</dt>
         <dd>@product.description</dd>
     }
     </dl>
-}
+    }
