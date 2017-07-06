@@ -1,0 +1,5 @@
+help new
+help new options
+help new --options
+sbt new
+exit
