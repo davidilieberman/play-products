@@ -37,6 +37,8 @@ div.screenshot {
     padding: 20px;
 }
 
+.navbar-fixed-top, .nvarbar-fixed-bottom { position:relative; }
+
 h1 {
     font-size: 125%;
 }
@@ -94,6 +96,11 @@ dl.products {
 dt {
     clear: right;
 }
+
+dd {
+    padding-left:16px;
+}
+
 
 .barcode {
     float: right;
