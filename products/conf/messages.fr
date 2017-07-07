@@ -1,0 +1,4 @@
+ean = EAN
+name = Nom
+description = Descriptif
+products.details = Produit: {0}

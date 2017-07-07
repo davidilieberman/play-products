@@ -3,7 +3,7 @@
 @this(config:Configuration, mainTemplate:views.html.main)
 @(products: List[Product])(implicit messages: Messages)
 
-@mainTemplate("FRED") {
+@mainTemplate(Messages("application.name")) {
     <dl class="products">
     @for(product <- products) {
         <dt>@product.name</dt>
