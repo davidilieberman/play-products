@@ -17,6 +17,8 @@ object Product {
     Product(5018206244611L, "Zebra Paperclips", "Zebra Length 28mm Assorted 150 Pack")
   )
 
+  def add(p:Product):Unit = products = products + p
+
   def findAll:List[Product] = products.toList.sortBy(_.ean)
 
   def findByEan(ean: Long):Option[Product] = products.find(_.ean == ean)

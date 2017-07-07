@@ -1,7 +1,7 @@
 @this(mainTemplate:views.html.main)
-@(product:Product)(implicit lang:Lang)
+@(product:Product)(implicit messages:Messages, flash:Flash)
 
-@mainTemplate(Messages("product.details", product.name)) {
+@mainTemplate(Messages("products.details", product.name)) {
     <h2>
         @tags.barcode(product.ean)
         @Messages("product.details", product.name)

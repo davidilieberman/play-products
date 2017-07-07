@@ -6,7 +6,13 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 
+GET     /barcode/:ean               controllers.BarcodesController.barcode(ean: Long)
+
++nocsrf
+POST    /products                   controllers.ProductsController.save
+GET     /products/new               controllers.ProductsController.newProduct
 GET     /products                   controllers.ProductsController.list
+GET     /products/:ean              controllers.ProductsController.show(ean: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
